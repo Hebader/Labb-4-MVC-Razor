@@ -1,0 +1,15 @@
+﻿@using (Html.BeginForm("SearchById", "Customers", FormMethod.Post))
+{
+    <div>
+        <label for="id">Enter Customer ID:</label>
+        <input type="number" id="id" name="id" required />
+        <input type="submit" value="Search" />
+    </div>
+}
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">
+        @ViewBag.ErrorMessage
+    </div>
+}
